@@ -7,12 +7,26 @@
 #include <random>
 #include <chrono>
 #include <filesystem>
+#include <cassert>
 #include "lib.hpp"
 
 void slk_lib::hello_slkLib()
 {
     std::cout << "Hello slkLib\n";
 }
+std::map<std::string, std::string> slk_lib::get_args(int &argc, char *argv[])
+{
+    // -add text -date 1.12.2001
+    assert((argc % 2) == 1);
+    std::map<std::string, std::string> temp;
+    for (auto i{1}; i + 1 < argc; i += 2)
+    {
+        std::string s1 = argv[i];
+        std::string s2 = argv[i + 1];
+        temp[s1] = s2;
+    }
+    return temp;
+};
 
 std::vector<std::string> slk_lib::split_string(const std::string &txt, const char delimeter = ',')
 {

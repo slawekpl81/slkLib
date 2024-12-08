@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include <map>
 #include <sstream>
 #include <vector>
 #include <typeinfo>
@@ -13,6 +14,8 @@
 namespace slk_lib
 {
     void hello_slkLib();
+
+    std::map<std::string, std::string> get_args(int &argc, char *argv[]);
 
     std::vector<std::string> split_string(const std::string &txt, const char delimeter);
 
