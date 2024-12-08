@@ -12,6 +12,8 @@
 
 namespace slk_lib
 {
+    void hello_slkLib();
+
     std::vector<std::string> split_string(const std::string &txt, const char delimeter);
 
     std::vector<std::string> get_lines_from_file(const std::string &file_name);

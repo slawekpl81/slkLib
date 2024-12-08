@@ -9,6 +9,11 @@
 #include <filesystem>
 #include "lib.hpp"
 
+void slk_lib::hello_slkLib()
+{
+    std::cout << "Hello slkLib\n";
+}
+
 std::vector<std::string> slk_lib::split_string(const std::string &txt, const char delimeter = ',')
 {
     std::stringstream ss{txt};
